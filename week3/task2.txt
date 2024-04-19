@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int a[] = new int[n];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = in.nextInt();
+        }
+
+
+        int sumans = sum(a);
+        double averageans = average(a);
+          System.out.println(sumans + " " + averageans);
+    }
+      
+    public static int sum(int[] a) {
+        int s = 0;
+        for (int i = 0; i < a.length; i++) {
+            s += a[i];
+        }
+        return s;
+    }
+
+    public static double average(int[] a) {
+        int s = sum(a);
+        double v = (double) s / a.length;
+        return v;
+    }
+}
